@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegistrationController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="1300.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="25.0" layoutY="105.0" prefHeight="374.0" prefWidth="503.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane prefHeight="37.0" prefWidth="503.0" style="-fx-background-color: blue;">
+                     <children>
+                        <Label layoutX="201.0" layoutY="9.0" text="REGISTRATION" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                  <TextField fx:id="txtRegNo" layoutX="32.0" layoutY="107.0" onKeyPressed="#Key_Press_txtRegNo" />
+                  <TextField fx:id="txtRegDate" layoutX="278.0" layoutY="107.0" onKeyPressed="#Key_Press_txtRegDate" />
+                  <TextField fx:id="txtRegFee" layoutX="32.0" layoutY="312.0" onKeyPressed="#Key_Press_txtRegFee" />
+                  <Label layoutX="36.0" layoutY="66.0" text="RegNo" />
+                  <Label layoutX="282.0" layoutY="66.0" text="RegDate" />
+                  <Label layoutX="35.0" layoutY="276.0" text="RegFee" />
+                  <Label layoutX="35.0" layoutY="171.0" text="Student_ID" />
+                  <ComboBox fx:id="ComboStudentID" layoutX="32.0" layoutY="211.0" onAction="#Drop_ComboStudentID" prefWidth="150.0" />
+                  <ComboBox fx:id="ComboCourseOCde" layoutX="282.0" layoutY="211.0" onAction="#Drop_ComboStudentID" prefWidth="150.0" />
+                  <Label layoutX="282.0" layoutY="179.0" text="Course_Code" />
+                  <Label layoutX="282.0" layoutY="276.0" text="Batch" />
+                  <TextField fx:id="txtBatchNo" layoutX="283.0" layoutY="312.0" onKeyPressed="#Key_Press_txtRegFee" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="62.0" prefWidth="1300.0" style="-fx-background-color: blue;" />
+            <Button fx:id="btnSaveRegistration" layoutX="68.0" layoutY="524.0" mnemonicParsing="false" onAction="#btn_Press_btnSaveRegistration" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: blue;" text="Register" textFill="WHITE" />
+            <TableView fx:id="tblRegTable" layoutX="741.0" layoutY="124.0" prefHeight="337.0" prefWidth="535.0">
+               <columns>
+                  <TableColumn fx:id="no" prefWidth="75.0" text="No" />
+                  <TableColumn fx:id="date" prefWidth="75.0" text="Date" />
+                  <TableColumn fx:id="fee" prefWidth="75.0" text="Fee" />
+                  <TableColumn fx:id="batct" prefWidth="75.0" text="Batch" />
+                  <TableColumn fx:id="S_ID" prefWidth="75.0" text="S_ID" />
+                  <TableColumn fx:id="C_ID" prefWidth="75.0" text="C_ID" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button fx:id="btnNavRGCourse" layoutX="970.0" layoutY="538.0" mnemonicParsing="false" onAction="#Key_Press_btnNavRGCourse" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #e056fd;" text="Course" textFill="WHITE" />
+            <Button fx:id="btnNavRGCourse1" layoutX="1119.0" layoutY="536.0" mnemonicParsing="false" onAction="#Key_Press_btnNavRGCourse" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #686de0;" text="Student" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
